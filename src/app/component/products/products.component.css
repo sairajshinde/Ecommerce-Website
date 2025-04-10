@@ -1,0 +1,47 @@
+.card-top{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: aliceblue;
+    background-clip: border-box;
+    border: 1px solid rgb(0, 0, 0,0.2);
+}
+
+.item img{
+    width: 64px;
+}
+.item{
+    margin: 0px 15px;
+    text-align: center;
+}
+.item a:hover{
+    color: rgb(16, 16, 17);
+}
+
+.card{
+    padding: 20px;
+    margin: 50px;
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+.card img:hover{
+    transition: 0.3 ease-in-out;
+    transition: scale(1.5);
+}
+
+.form-range{
+    margin: 10px 10px 10px 10px;
+}
+
+.Rating{
+    margin-top: 25px;
+    margin-left: 40px;
+}
+

@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.cart-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.center {
+  text-align: center;
+  padding: 50px;
+}
+
+.center img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.center h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.center h6 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.center .btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.center .btn:hover {
+  background-color: #0056b3;
+}
+
+.card-table {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.card-product table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-top: 10px;
+  table-layout: fixed;
+}
+
+.card-product th,
+.card-product td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-product th:nth-child(1),
+.card-product td:nth-child(1) {
+  text-align: center;
+  width: 10%;
+}
+
+.card-product th:nth-child(2),
+.card-product td:nth-child(2) {
+  text-align: left;
+  width: 15%;
+  white-space: nowrap;
+}
+
+.card-product th:nth-child(3),
+.card-product td:nth-child(3) {
+  text-align: center;
+  width: 10%;
+}
+
+.card-product th:nth-child(4),
+.card-product td:nth-child(4) {
+  text-align: left;
+  width: 20%;
+  white-space: nowrap;
+}
+
+.card-product th:nth-child(5),
+.card-product td:nth-child(5) {
+  text-align: right;
+  width: 10%;
+}
+
+.card-product th:nth-child(6),
+.card-product td:nth-child(6) {
+  text-align: center;
+  width: 10%;
+}
+
+.card-product th:nth-child(7),
+.card-product td:nth-child(7) {
+  text-align: right;
+  width: 10%;
+}
+
+.card-product th:nth-child(8),
+.card-product td:nth-child(8) {
+  text-align: center;
+  width: 10%;
+}
+
+.card-product th {
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: #333;
+}
+
+.card-product td {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-product img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-product button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-product button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .card-product th,
+  .card-product td {
+    font-size: 12px;
+  }
+
+  .center img {
+    width: 150px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .center h4 {
+    font-size: 20px;
+  }
+
+  .center h6 {
+    font-size: 14px;
+  }
+}
+
+.total-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.total-container h4 {
+  font-size: 1.5rem;
+  color: #495057;
+  margin-left: 800px;
+}
+
+.buy-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  margin-right:800px;
+}
+
+.buy-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.buy-button:active {
+  background-color: #115a22;
+}
+
+@media (max-width: 768px) {
+  .total-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buy-button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.card-product td button {
+  margin: 0 5px;
+}

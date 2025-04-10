@@ -1,0 +1,74 @@
+<ng-container *ngIf="userProducts.length ==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="userProducts.length !=0">
+  <div class="container" *ngFor="let items of userProducts; let i = index">
+    <div class="card-table">
+      <div class="card-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>Sr.No</th>
+              <th>Product Name</th>
+              <th>Product Image</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ i + 1 }}</td>
+              <td>{{ items.title }}</td>
+              <td><img src="{{ items.image }}" alt="" /></td>
+              <td>{{ items.description }}</td>
+              <td>{{ items.price }}</td>
+              <td>
+                <button
+                  class="btn btn-secondary"
+                  (click)="decrementQuantity(items)"
+                >
+                  -
+                </button>
+                {{ items.quantity }}
+                <button
+                  class="btn btn-secondary"
+                  (click)="incrementQuantity(items)"
+                >
+                  +
+                </button>
+              </td>
+              <td>{{ items.price * items.quantity }}</td>
+              <td>
+                <button class="btn btn-danger" >
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="userProducts.length > 0">
+    <div class="total-container">
+      <h4>Total: {{ total | currency }}</h4>
+      <button class="buy-button" (click)="navigateToPurchase()">Buy Now</button>
+    </div>
+  </ng-container>
+</ng-container>
+
+<router-outlet></router-outlet>

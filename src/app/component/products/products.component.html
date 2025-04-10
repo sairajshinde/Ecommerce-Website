@@ -1,0 +1,69 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a>
+        <img (click)="onAll()"
+          src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
+          alt=""
+        />
+      </a>
+      <h6>All Products</h6>
+    </div>
+    <div class="item">
+      <a>
+        <img (click)="onElectronice()"
+          src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100"
+          alt=""
+        />
+      </a>
+      <h6>Electronics</h6>
+    </div>
+    <div class="item">
+      <a>
+        <img (click)="onFashion()"
+          src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100"
+          alt=""
+        />
+      </a>
+      <h6>Fashion</h6>
+    </div>
+    <div class="item">
+      <a>
+        <img (click)="onJewellery()"
+          style="width: 62px; margin-top: 5px"
+          src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50"
+          alt=""
+        />
+      </a>
+      <h6>Jewellery</h6>
+    </div>
+    <div class="item">
+      <span><strong>Price range:</strong></span>
+      <input type="range" min="0" max="1000" [(ngModel)]="sliderValue" (input)="onSlide()" id="currency-slider"  class="form-range"/>
+      <span class="currency-value"><strong>${{ sliderValue | number:'1.0-0' }}</strong></span>
+    </div>
+    <div class="item">
+      <button type="button" class="btn btn-primary dropdown-toggle Rating" data-bs-toggle="dropdown" aria-expanded="false">
+        Rating Filter
+      </button>
+      <ul class="dropdown-menu">
+        <li><button class="dropdown-item" (click)="onRatingFilter5()">5⭐</button></li>
+        <li><button class="dropdown-item" (click)="onRatingFilter4()">4⭐</button></li>
+        <li><button class="dropdown-item" (click)="onRatingFilter3()">3⭐ & below</button></li>
+      </ul>
+    </div>    
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of filteredProducts">
+      <div class="card col-md-3">
+        <img src="{{item.image}}" alt="" />
+        <h5 style="white-space: nowrap;;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+        <p style="white-space: nowrap;;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+        <p><strong>Price:{{item.price |currency}}</strong></p>
+        <button class="btn btn-primary" (click)="addToCart(item)">Add to cart</button>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="success-container">
+    <div class="success-card">
+      <h2 class="success-header">Purchase Successful</h2>
+      
+      <div class="total-container">
+        <h4>Total Amount: {{ total | currency }}</h4>
+      </div>
+      
+      <div class="details-container">
+        <p>Your order has been successfully placed. Thank you for shopping with us!</p>
+        <p>Your payment has been processed, and the order will be shipped to your address shortly.</p>
+      </div>
+      
+      <div class="action-buttons">
+        <button class="btn btn-primary" (click)="onSuccesful()">Back to Home</button>
+      </div>
+    </div>
+  </div>
+  
